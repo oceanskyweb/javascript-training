@@ -225,9 +225,10 @@ console.log(anotherAmount, typeof anotherAmount);
 ```JavaScript
 decimalNumber = parseFloat(decimalNumber);
 console.log(decimalNumber, typeof decimalNumber);
-// If you use 'parseInt', it will convert to number but remove the '.5'.
-// So if you want to retain the decimal, use parseFloat.
 ```
+
+If you use 'parseInt', it will convert to number but remove the '.5'.
+So if you want to retain the decimal, use parseFloat.
 
 ## Convert number to boolean
 
