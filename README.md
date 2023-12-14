@@ -119,3 +119,55 @@ console.log(sayHelloFunc, typeof sayHelloFunc);
 // Why defined as function and not object?
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 ```
+
+## Primitive Type: Stored in "stack"
+
+- String
+- Number
+- Boolean
+- Null
+- Undefined
+- Symbol
+- BigInt
+
+## Reference Types: Stored in Heap
+
+- Arrays
+- Functions
+- Objects
+
+Variables are created in stack, even object variables. If you create a variable and make it an object, the variable is stored in the stack, but the object is accessed by reference in the heap.
+
+- If you create a new variable and assign it an object variable that already exist, a new "object" is not created. Instead, it points or references the existing object in heap. Thus, you can now use the new variable to change values inside the existing object.
+
+### See Example below
+
+```
+// variables
+const name = 'John';
+const johnAge = 30;
+
+// New object, values are stored on the heap
+const user = {
+  name: 'Bob',
+  age: 55,
+};
+
+// New variable references the existing object on heap
+let newUser = user;
+
+// console will show John and Bob as the names
+console.log(name, user);
+
+// New variable referencing existing object still shows Bob
+console.log(newUser);
+
+// Update name using new variable referencing existing object
+newUser.name = 'Victor';
+
+// Now the object has the name "Victor"
+console.log(user);
+
+// Both variable pointing to same object pring the same name now
+console.log(user, newUser);
+```

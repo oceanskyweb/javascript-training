@@ -55,3 +55,31 @@ const sayHelloFunc = sayHello;
 console.log(sayHelloFunc, typeof sayHelloFunc);
 // Why defined as function and not object?
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// variables
+const name = 'John';
+const johnAge = 30;
+
+// New object, values are stored on the heap
+const user = {
+  name: 'Bob',
+  age: 55,
+};
+
+// New variable references the existing object on heap
+let newUser = user;
+
+// console will show John and Bob as the names
+console.log(name, user);
+
+// New variable referencing existing object still shows Bob
+console.log(newUser);
+
+// Update name using new variable referencing existing object
+newUser.name = 'Victor';
+
+// Now the object has the name "Victor"
+console.log(user);
+
+// Both variable pointing to same object pring the same name now
+console.log(user, newUser);
