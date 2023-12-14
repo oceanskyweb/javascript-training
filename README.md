@@ -40,12 +40,13 @@ Is a superset of JavaScript and has some additional features. It allows static-t
 
 ```
 const firstName = 'Sarah';
-console.log(firstName, typeof firstName);```
-
+console.log(firstName, typeof firstName);
 ```
 
+```
 const output = firstName;
-console.log(output, typeof output);```
+console.log(output, typeof output);
+```
 
 ## Number
 
@@ -85,13 +86,15 @@ console.log(emptyVariable);
 ```
 const id = Symbol('id');
 const symbolType = id;
-console.log(symbolType);```
+console.log(symbolType);
+```
 
 ## BigInt
 ```
 const n = 44897793493450n;
 const bigIntType = n;
 console.log(bigIntType, typeof bigIntType);
+```
 
 ## Reference Types
 ```
