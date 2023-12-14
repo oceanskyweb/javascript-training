@@ -38,19 +38,19 @@ Is a superset of JavaScript and has some additional features. It allows static-t
 
 ## String
 
-```
+```javascript
 const firstName = 'Sarah';
 console.log(firstName, typeof firstName);
 ```
 
-```
+```javascript
 const output = firstName;
 console.log(output, typeof output);
 ```
 
 ## Number
 
-```
+```javascript
 const age = 30;
 console.log(age, typeof age);
 const temperature = 98.5;
@@ -59,14 +59,14 @@ console.log(temperature, typeof temperature); // Also a number type
 
 ## Boolean
 
-```
+```javascript
 const hasKids = true;
 console.log(hasKids, typeof hasKids);
 ```
 
 ## Null
 
-```
+```javascript
 const aptNumber = null;
 const housing = aptNumber;
 console.log(housing, typeof housing);
@@ -76,7 +76,7 @@ console.log(housing, typeof housing);
 
 ## Undefined
 
-```
+```javascript
 let score; // Declared variable without defining it
 const emptyVariable = score;
 console.log(emptyVariable);
@@ -84,7 +84,7 @@ console.log(emptyVariable);
 
 ## Symbol
 
-```
+```javascript
 const id = Symbol('id');
 const symbolType = id;
 console.log(symbolType);
@@ -92,7 +92,7 @@ console.log(symbolType);
 
 ## BigInt
 
-```
+```javascript
 const n = 44897793493450n;
 const bigIntType = n;
 console.log(bigIntType, typeof bigIntType);
@@ -100,19 +100,19 @@ console.log(bigIntType, typeof bigIntType);
 
 ## Reference Types
 
-```
+```javascript
 const numbers = [1, 2, 3, 5];
 const referType = numbers;
 console.log(referType, typeof referType);
 
 const person = {
-name: 'Fig',
-age: 443,
+  name: 'Fig',
+  age: 443,
 };
 console.log(person, typeof person);
 
 function sayHello() {
-console.log('Hello');
+  console.log('Hello');
 }
 const sayHelloFunc = sayHello;
 console.log(sayHelloFunc, typeof sayHelloFunc);
@@ -142,7 +142,7 @@ Variables are created in stack, even object variables. If you create a variable 
 
 ### See Example below
 
-```
+```javascript
 // variables
 const name = 'John';
 const johnAge = 30;
