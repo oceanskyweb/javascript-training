@@ -1,4 +1,4 @@
-# javascript-training
+# JavaScript Training
 
 ## All data is associated with a data type
 
