@@ -433,3 +433,90 @@ x = Math.floor(Math.random() * 10 + 1); // Any number from 1-10
 
 console.log(x);
 ```
+
+## Date and Times
+
+```JavaScript
+let d;
+
+// Date Object
+d = new Date();
+
+// Date Converted to String
+d = d.toString();
+
+// Date Month is 0 index: 0 is Jan
+d = new Date(2021, 0, 10);
+
+// If you pass in string then 7 is July
+d = new Date('2021-07-10'); // Jul 10 2021 00:00:00
+d = new Date('07-10-2021'); // Jul 10 2021 00:00:00
+
+// Starting string with year will be off by 1 day
+d = new Date('2022-10-09'); // Sat Oct 08 2022 20:00:00
+
+// Exact milisecond in time
+d = Date.now();
+
+d = new Date('07-10-2023');
+d = d.getTime(); // 1688961600000
+d = d.valueOf(); // 1688961600000
+
+d = new Date(1688961600000); // Converted to Mon Jul 10 2023 00:00:00
+
+d = Math.floor(Date.now() / 1000); // Time stamps in seconds
+
+console.log(d, typeof d);
+```
+
+## Date Object & API
+
+```JavaScript
+let x;
+let d = new Date();
+
+x = d.toString();
+
+x = d.getTime();
+x = d.valueOf();
+
+// Gets current year unless specific year was provided when object
+// was instantiated.
+x = d.getFullYear();
+
+// Month is 0 based so although currently is December
+// This will show as November (11), unless a specific month
+// was provided when object was instantiated.
+x = d.getMonth(); // 11
+// Optional: x = d.getMonth() + 1;
+
+x = d.getDate(); // Date of the month
+x = d.getDay(); // Get Day of the week in number -> 1 == Monday
+x = d.getHours();
+x = d.getMinutes();
+x = d.getMilliseconds();
+
+x = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+
+// API to use for dates
+x = Intl.DateTimeFormat('en-US').format(d); // 12/18/2023
+x = Intl.DateTimeFormat('default').format(d); // 18/12/2023
+x = Intl.DateTimeFormat('default', { month: 'long' }).format(d); // December
+
+// Call method on date object using API
+x = d.toLocaleString('default', { month: 'short' });
+
+// Preferred way to produce dates
+x = d.toLocaleString('default', {
+  month: 'short',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  timeZone: 'America/New_York',
+}); // December 18, 2023 at 11:54:24 PM
+
+console.log(x);
+```
